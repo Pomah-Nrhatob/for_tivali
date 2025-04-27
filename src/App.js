@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Multiselect from "./components/Multiselect/Multiselect";
+import { data } from "./data";
 
 function App() {
+  const [selectedOptions, setSelectedOptions] = useState([]);
+
+  const onSelectionChange = (selectedOptionsList) => {
+    setSelectedOptions(selectedOptionsList);
+    alert(
+      `На сервер отправлены выбранные опции: ${
+        selectedOptionsList.length > 0
+          ? selectedOptionsList.map((option) => {
+              return " " + option.value;
+            })
+          : "без опций"
+      }`
+    );
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Multiselect
+        placeholder="Выбери города"
+        selectedOptions={selectedOptions}
+        options={data}
+        onSelectionChange={onSelectionChange}
+      />
     </div>
   );
 }

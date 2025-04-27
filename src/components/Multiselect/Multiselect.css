@@ -1,0 +1,128 @@
+.multiselect-container {
+  width: 400px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  margin-top: 30px;
+}
+
+.multiselect-container h3 {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.placeholder {
+  margin: 0 0 10px;
+  font-size: 16px;
+  color: #333;
+}
+
+.selected-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.selected-option {
+  border: 1px solid black;
+  width: fit-content;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 7px;
+}
+
+.search-input {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.options-list {
+  padding-right: 20px;
+  width: 90%;
+  max-height: 150px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.option-item {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.option-item:hover {
+  background-color: #f0f0f0;
+}
+
+.option-item.selected {
+  background-color: #cce5ff;
+}
+
+.no-results {
+  padding: 10px;
+  text-align: center;
+  color: #888;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.clear-all-btn,
+.submit-btn {
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.clear-all-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.clear-all-btn:hover {
+  background-color: #c82333;
+}
+
+.submit-btn {
+  background-color: #28a745;
+  color: white;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+.highlight {
+  font-weight: bold;
+  color: #ff5722;
+  background-color: #ffe0b2;
+}
+
+.remove-option-btn {
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: rgba(255, 0, 0, 0.503);
+}
+
+.remove-option-btn:hover {
+  color: rgb(132, 1, 1);
+}
+
+.span-country {
+  font-size: 12px;
+  color: gray;
+}
